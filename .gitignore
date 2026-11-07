@@ -1,0 +1,11 @@
+# Environments
+.venv/
+__pycache__/
+
+# Data & Models
+data/
+*.csv
+xgb_model.json
+
+# IDE settings
+.vscode/
