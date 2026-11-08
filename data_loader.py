@@ -213,8 +213,7 @@ def prepare_training_dataset(
     feature_cols = get_feature_column_names()
     
     # Drop rows with NaN caused by rolling windows and future shift
-    clean_df = featured_df.dropna(subset=feature_cols + ["target"]).reset_index(drop=True)
-
+    clean_df = featured_df.dropna(subset=feature_cols + ["future_return"]).reset_index(drop=True)
     if save_to_csv:
         os.makedirs(DATA_DIR, exist_ok=True)
         raw_path = os.path.join(DATA_DIR, "btc_usdt_1h_raw.csv")
