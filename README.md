@@ -1,4 +1,4 @@
-# NeuralPulse Trading 📈
+# NeuralPulse Trading(BTCUSDT) 📈
 
 An institutional-grade, multi-agent quantitative trading & **Binance Futures VIP Signal** pipeline for cryptocurrency markets (`BTC/USDT`). Operating in **High-Selectivity Sniper Mode**, this project automates multi-horizon market structure monitoring across 3 execution horizons (**SCALP**, **INTRADAY**, **SWING**) via live Binance WebSockets (`5m`, `15m`, `1h`, `4h`, `1d`), Machine Learning (XGBoost + SHAP), NLP news sentiment (CryptoPanic + NLTK VADER / FinBERT), and conditional AI Agent orchestration (LangGraph) with automated 5-stage trade lifecycle management and zero-cost SQLite quant trade memory.
 
