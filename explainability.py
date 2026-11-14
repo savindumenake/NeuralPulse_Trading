@@ -9,7 +9,8 @@ def explain_model_decisions():
     print("[XAI] Loading Model and Data...")
     
     model = xgb.Booster()
-    model.load_model("xgb_model.json")
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xgb_model.json")
+    model.load_model(model_path)
     
     data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "btc_usdt_1h_features.csv")
     df = pd.read_csv(data_path)
@@ -53,7 +54,8 @@ def explain_model_decisions():
 
     plt.figure(figsize=(10, 6))
     shap.summary_plot(shap_values, X, show=False)
-    plt.savefig("shap_summary.png", bbox_inches='tight', dpi=300)
+    shap_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "shap_summary.png")
+    plt.savefig(shap_path, bbox_inches='tight', dpi=300)
     print("\n💾 Visual SHAP summary saved as 'shap_summary.png' for your Portfolio!")
 
 if __name__ == "__main__":

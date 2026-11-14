@@ -5,7 +5,13 @@ __pycache__/
 # Data & Models
 data/
 *.csv
+*.db
+*.log
 xgb_model.json
+shap_summary.png
 
 # IDE settings
 .vscode/
+
+# Environment secrets
+.env

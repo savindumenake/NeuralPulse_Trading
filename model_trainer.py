@@ -59,8 +59,8 @@ def train_and_save_model():
     print("Classification Report:")
     print(classification_report(y_test, y_pred, target_names=["SELL/HOLD (0)", "BUY (1)"]))
     
-    # Save the trained model
-    model_filename = "xgb_model.json"
+    # Save the trained model (use absolute path for consistency)
+    model_filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xgb_model.json")
     model.save_model(model_filename)
     print(f"💾 Model successfully saved as '{model_filename}'")
 
